@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+body {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+h1 {
+  font-family: "Outfit";
+}
+p {
+  font-family: "Inter";
+}
+img {
+  width: 10%;
+}
+div {
+  margin-top: 10%;
+}
+div h1 {
+  text-align: center;
+  color: white;
+  padding-right: 5%;
+  font-weight: 300;
+  font-size: 7cap;
+  margin-bottom: 0;
+}
+div h1 span {
+  font-weight: 700;
+}
+#buttons {
+  text-align: center;
+}
+button {
+  background-color: transparent;
+  width: 30%;
+  margin-right: 5%;
+  border-radius: 70px;
+  border: solid white 7px;
+  margin-top: 2%;
+}
+#buttons p {
+  color: white;
+  font-size: 300%;
+  margin-top: 33px;
+}
