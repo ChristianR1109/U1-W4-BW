@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   margin-left: 5%;
   margin-top: 3%;
+  margin-right: 5%;
 }
 h1 {
   font-family: "Outfit";
@@ -16,8 +17,22 @@ p {
 img {
   width: 10%;
 }
+#timer {
+  text-align: center;
+  color: white;
+  margin-left: 87%;
+  padding: 30px;
+  border: solid aqua 20px;
+  border-radius: 50%;
+}
+#timer h1 {
+  padding: 0;
+}
+#timer p {
+  margin: 0;
+}
 div {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 div h1 {
   text-align: center;
@@ -32,17 +47,33 @@ div h1 span {
 }
 #buttons {
   text-align: center;
+  margin-left: 5%;
 }
 button {
   background-color: transparent;
   width: 30%;
   margin-right: 5%;
-  border-radius: 70px;
-  border: solid white 7px;
   margin-top: 2%;
+  border-color: white;
+  box-shadow: 0px 0px 0px 0px rgb(255 255 255 /100%), inset 2px 3px 2px 2px rgb(255 255 255 /100%);
+  cursor: pointer;
+
+  border-radius: 60px;
 }
 #buttons p {
   color: white;
   font-size: 300%;
   margin-top: 33px;
+}
+
+#footer h2 {
+  font-family: "Inter";
+  color: white;
+  font-size: 25px;
+  text-align: center;
+
+  margin-top: 5%;
+}
+#footer span {
+  color: #d20094;
 }
