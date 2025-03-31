@@ -1,0 +1,13 @@
+body{
+    background-image: url(assets/bg.jpg);
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    padding-top: 2em;
+    padding-left: 5em;
+}
+header img{
+    width: 15%;
+}
