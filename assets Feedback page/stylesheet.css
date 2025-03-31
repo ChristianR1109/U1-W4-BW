@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
   margin: 0;
@@ -60,6 +60,23 @@ main li {
   list-style-type: none;
   display: inline;
 }
+
+.rating-container {
+  display: inline-block;
+  gap: 8px;
+  font-size: 2rem; /* Dimensione delle stelle */
+  cursor: pointer;
+}
+
+.star {
+  color: #ccc; /* Colore stella spenta */
+  transition: color 0.2s ease-in-out;
+}
+
+.star.hover,
+.star.selected {
+  color: #0ff; /* Colore stella accesa */
+}
 /* MODIFCHE AL FOOTER*/
 
 button {
@@ -69,7 +86,7 @@ button {
   padding-right: 25px;
 }
 
-input {
+#comment {
   margin-block: 2%;
   min-width: 30%;
   border: none;

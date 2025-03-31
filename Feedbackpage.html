@@ -12,7 +12,7 @@
     <main>
       <h1>Tell us how it's going</h1>
       <p>From 0 to 10, hw likely are you to recommend EPICODE to a friend or a colleague?</p>
-      <ul>
+      <!--<ul>
         <li id="stars"><img src="./assets Feedback page/foto/star.svg" alt=" star" /></li>
         <li id="stars"><img src="./assets Feedback page/foto/star.svg" alt=" star" /></li>
         <li id="stars"><img src="./assets Feedback page/foto/star.svg" alt=" star" /></li>
@@ -23,12 +23,26 @@
         <li id="stars"><img src="./assets Feedback page/foto/star.svg" alt=" star" /></li>
         <li id="stars"><img src="./assets Feedback page/foto/star.svg" alt=" star" /></li>
         <li id="stars"><img src="./assets Feedback page/foto/star.svg" alt=" star" /></li>
-      </ul>
+      </ul>-->
+      <div class="rating-container" aria-label="Sistema di valutazione a stelle">
+        <span class="star" data-value="1" aria-label="1 stella su 10">★</span>
+        <span class="star" data-value="2" aria-label="2 stelle su 10">★</span>
+        <span class="star" data-value="3" aria-label="3 stelle su 10">★</span>
+        <span class="star" data-value="4" aria-label="4 stelle su 10">★</span>
+        <span class="star" data-value="5" aria-label="5 stelle su 10">★</span>
+        <span class="star" data-value="6" aria-label="6 stella su 10">★</span>
+        <span class="star" data-value="7" aria-label="7 stelle su 10">★</span>
+        <span class="star" data-value="8" aria-label="8 stelle su 10">★</span>
+        <span class="star" data-value="9" aria-label="9 stelle su 10">★</span>
+        <span class="star" data-value="10" aria-label="10 stelle su 10">★</span>
+      </div>
+
       <h3>Leave us an open feedback about your experience so far</h3>
       <footer>
-        <input type="text" placeholder="Write your comment here" />
+        <input type="text" placeholder="Write your comment here" id="comment" />
       </footer>
       <button type="submit">Send your Feedback</button>
     </main>
+    <script src="./assets Feedback page/partejava.js"></script>
   </body>
 </html>
