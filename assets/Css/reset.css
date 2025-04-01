@@ -18,13 +18,6 @@ body {
   line-height: 1.5;
 }
 
-/* Remove list styles */
-ul,
-ol {
-  list-style: none;
-}
-
-/* Reset links */
 a {
   text-decoration: none;
   color: inherit;

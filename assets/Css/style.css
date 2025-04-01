@@ -13,11 +13,27 @@ article {
 }
 img {
   width: 15%;
+  margin: 1rem;
 }
-div {
+.inter {
   font-family: "inter";
   font-weight: normal;
   color: #e7e7eb;
   font-size: 4rem;
-  line-height: 4.5rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+}
+h2 {
+  color: #c2128d;
+}
+
+div {
+  padding: 1.5rem;
+}
+
+button {
+  background-color: #00ffff;
+}
+strong {
+  color: #0b113b;
 }
