@@ -17,13 +17,20 @@ p {
 img {
   width: 10%;
 }
+#outer {
+  margin-left: 89%;
+  border-radius: 50%; /* Arrotonda perfettamente il bordo */
+  background: conic-gradient(#8b6394 0deg 0deg, cyan 0deg 360deg);
+  padding: 20px;
+}
 #timerElements {
   text-align: center;
   color: white;
-  margin-left: 89%;
-  padding: 30px;
-  border: solid aqua 20px;
-  border-radius: 100%;
+  padding: 25px;
+  border-radius: 50%;
+  background-image: url("./assets/bg.jpg");
+  background-position-x: right;
+  background-repeat: no-repeat;
 }
 #timer {
   padding: 0;
@@ -85,4 +92,19 @@ button:hover {
 }
 #footer span {
   color: #d20094;
+}
+
+.outer-timerElements {
+  border-radius: 50%; /* Arrotonda perfettamente il bordo */
+  background: conic-gradient(cyan 0deg 180deg, magenta 180deg 360deg);
+  text-align: center;
+  color: white;
+  margin-left: 89%;
+  padding: 30px;
+  border-radius: 50%;
+}
+.inner-circle {
+  width: 180px; /* Riduzione per creare il bordo visibile */
+  height: 180px;
+  border-radius: 50%;
 }

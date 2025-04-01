@@ -85,6 +85,11 @@ let countdown = 60;
 function startCountdown() {
   console.log(countdown);
   const countNumber = document.getElementById("timer");
+  const borderC = document.getElementById("outer");
+  const value = Math.floor((countdown / 60) * 360);
+  let value2 = 360 - value;
+  borderC.style.background = `conic-gradient(  #8b6394 0deg ${value2}deg, cyan 0deg 360deg)`;
+  console.log(value);
 
   if (countdown >= 0) {
     countNumber.innerText = countdown;
