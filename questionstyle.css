@@ -17,7 +17,7 @@ p {
 img {
   width: 10%;
 }
-#timer {
+#timerElements {
   text-align: center;
   color: white;
   margin-left: 89%;
@@ -25,13 +25,14 @@ img {
   border: solid aqua 20px;
   border-radius: 100%;
 }
-#timer h1 {
+#timer {
   padding: 0;
   margin: 0;
   font-size: 7cap;
   font-weight: 300;
+  font-family: "Outfit";
 }
-#timer p {
+#timerElements p {
   margin: 0;
 }
 #questionTitle {

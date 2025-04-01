@@ -80,6 +80,20 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+let countdown = 60;
+
+function startCountdown() {
+  console.log(countdown);
+  const countNumber = document.getElementById("timer");
+
+  if (countdown >= 0) {
+    countNumber.innerText = countdown;
+    countdown--;
+    setTimeout(startCountdown, 1000);
+  }
+  return countdown;
+}
+startCountdown();
 
 function startQuiz() {
   questions.forEach((question) => {
