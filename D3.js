@@ -99,12 +99,18 @@ function startCountdown() {
   return countdown;
 }
 startCountdown();
-
+//provare a mettere tutto in un ciclo for
 function startQuiz() {
-  questions.forEach((question) => {
-    const title = document.getElementById("questionTitle");
-    const newH1 = document.createElement("h1");
-    newH1.innerText = question.question;
-    title.appendChild(newH1);
-  });
+  const max = questions.length;
+  console.log(questions.length);
+  let c = 5;
+  const title = document.getElementById("questionTitle");
+  title.innerHTML = "";
+
+  const currentQuestion = questions[c];
+  const newH1 = document.createElement("h1");
+  newH1.innerText = currentQuestion.question;
+  title.appendChild(newH1);
+  c++;
 }
+startQuiz();
