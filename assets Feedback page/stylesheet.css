@@ -60,22 +60,23 @@ main li {
   list-style-type: none;
   display: inline;
 }
+/*MODIFICHE ALLE STELLE */
 
-.rating-container {
+.ratingcontainer {
   display: inline-block;
   gap: 8px;
   cursor: pointer;
 }
 
 .star {
-  color: #413f3f; /* Colore stella spenta */
+  color: #413f3f;
   transition: color 0.2s ease-in-out;
   font-size: 50px;
 }
 
 .star.hover,
 .star.selected {
-  color: #0ff; /* Colore stella accesa */
+  color: #0ff;
 }
 /* MODIFCHE AL FOOTER*/
 
@@ -84,11 +85,12 @@ button {
   padding-block: 20px;
   padding-left: 25px;
   padding-right: 25px;
+  box-shadow: #0ff 0px 0px 20px 0px;
 }
 
 #comment {
-  margin-block: 2%;
-  min-width: 30%;
+  margin-block: 4%;
+  min-width: 50%;
   border: none;
   border-bottom: solid #900080;
   background: none;

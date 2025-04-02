@@ -24,3 +24,23 @@ stars.forEach((star) => {
     stars.forEach((s) => s.classList.remove("hover"));
   });
 });
+
+// Aggiungere l'evento click per selezionare il valore
+stars.forEach((star) => {
+  star.addEventListener("click", () => {
+    const value = parseInt(star.getAttribute("data-value"), 10);
+
+    // Rimuovi la classe "selected" da tutte le stelle
+    stars.forEach((s) => s.classList.remove("selected"));
+
+    // Aggiungi la classe "selected" alle stelle fino al valore selezionato
+    stars.forEach((s) => {
+      const starValue = parseInt(s.getAttribute("data-value"), 10);
+      if (starValue <= value) {
+        s.classList.add("selected");
+      }
+    });
+
+    console.log(`Selected value: ${value}`);
+  });
+});
