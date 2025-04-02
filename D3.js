@@ -101,9 +101,7 @@ function startCountdown() {
   }
 }
 function resetCountdown() {
-  // Cancella il timer precedente
   clearTimeout(countdownTimer);
-  // Reimposta il countdown e riavvia
   countdown = 60;
   startCountdown();
 }
