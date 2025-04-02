@@ -26,5 +26,15 @@ const divWrong=document.querySelector(".wrong");
 const h3Worng=document.createElement("h3");
 h3Worng.innerText=randomSbagliate+"/"+massimo+ " questions";
 divWrong.appendChild(h3Worng);
-}
+
+const aswers=document.querySelector(".comment-test h4");
+const aswers2=document.querySelector(".comment-test h5");
+console.log(aswers);
+console.log(aswers2);
+if(randomGiuste<60){
+     aswers.innerText="Failed!";
+     aswers2.innerText="You don't passed the exam."
+     aswers2.style.color="#d20094"
+}     
+} 
 calcoloPercentuale();
