@@ -11,12 +11,20 @@ const giuste=document.createElement("h1");
 giuste.innerText=randomGiuste+"%";
 variabileGiuste.appendChild(giuste);
 
-
+const divCorrect=document.querySelector(".correct");
+const h3Correct= document.createElement("h3");
+h3Correct.innerText=randomGiuste+"/"+massimo+ " questions";
+divCorrect.appendChild(h3Correct);
 
 const variabileSbagliate=document.querySelector(".percentualeWrong");
 console.log(variabileSbagliate);
 const sbagliate= document.createElement("h1");
 sbagliate.innerText=randomSbagliate +"%";
 variabileSbagliate.appendChild(sbagliate);
+
+const divWrong=document.querySelector(".wrong");
+const h3Worng=document.createElement("h3");
+h3Worng.innerText=randomSbagliate+"/"+massimo+ " questions";
+divWrong.appendChild(h3Worng);
 }
 calcoloPercentuale();
