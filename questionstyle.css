@@ -19,7 +19,7 @@ img {
 }
 #outer {
   margin-left: 89%;
-  border-radius: 50%; /* Arrotonda perfettamente il bordo */
+  border-radius: 50%;
   background: conic-gradient(#8b6394 0deg 0deg, cyan 0deg 360deg);
   padding: 20px;
 }
