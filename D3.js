@@ -81,6 +81,7 @@ const questions = [
   },
 ];
 let countdown = 60;
+let countdownTimer;
 
 function startCountdown() {
   console.log(countdown);
@@ -94,23 +95,83 @@ function startCountdown() {
   if (countdown >= 0) {
     countNumber.innerText = countdown;
     countdown--;
-    setTimeout(startCountdown, 1000);
+    countdownTimer = setTimeout(startCountdown, 1000);
+  } else {
+    clearTimeout(countdownTimer);
   }
-  return countdown;
 }
-startCountdown();
-//provare a mettere tutto in un ciclo for
-function startQuiz() {
+function resetCountdown() {
+  // Cancella il timer precedente
+  clearTimeout(countdownTimer);
+  // Reimposta il countdown e riavvia
+  countdown = 60;
+  startCountdown();
+}
+
+let c = 0;
+
+function startQuiz(c) {
+  resetCountdown();
   const max = questions.length;
   console.log(questions.length);
-  let c = 5;
+
   const title = document.getElementById("questionTitle");
   title.innerHTML = "";
-
+  const n = questions.length;
+  let xn = "/ " + n;
   const currentQuestion = questions[c];
   const newH1 = document.createElement("h1");
   newH1.innerText = currentQuestion.question;
   title.appendChild(newH1);
-  c++;
+
+  const firstN = Math.floor(Math.random() * 4);
+  console.log(firstN);
+  let secondN = 0;
+  do {
+    temp = Math.floor(Math.random() * 4);
+  } while (temp === firstN);
+  secondN = temp;
+  console.log(secondN);
+  let thirdN = 0;
+  do {
+    temp = Math.floor(Math.random() * 4);
+  } while (temp === firstN || temp === secondN);
+  thirdN = temp;
+  console.log(thirdN);
+  let fourthN = 0;
+  do {
+    temp = Math.floor(Math.random() * 4);
+  } while (temp === firstN || temp === secondN || temp === thirdN);
+  fourthN = temp;
+  console.log(fourthN);
+
+  const answersLoc = document.querySelectorAll(".answer");
+  const firstAns = answersLoc[firstN];
+  firstAns.innerText = currentQuestion.correct_answer;
+  const secondAns = answersLoc[secondN];
+  secondAns.innerText = currentQuestion.incorrect_answers[2];
+  const thirdAns = answersLoc[thirdN];
+  thirdAns.innerText = currentQuestion.incorrect_answers[1];
+  const fourthAns = answersLoc[fourthN];
+  fourthAns.innerText = currentQuestion.incorrect_answers[0];
+
+  const questionNLoc = document.getElementById("questionN");
+  questionNLoc.innerHTML = `QUESTION ${c + 1} <span style='color: #d20094;'>${xn}</span>`;
+
+  answerClick();
 }
-startQuiz();
+startQuiz(c);
+
+function answerClick() {
+  const answerButtons = document.querySelectorAll(".answer");
+  answerButtons.forEach((button) => {
+    button.onclick = () => {
+      if (c < questions.length - 1) {
+        c++; // Passa alla prossima domanda
+        startQuiz(c); // Avvia la prossima domanda
+      } else {
+        alert("Quiz completato!"); // Mostra un messaggio quando il quiz è finito
+      }
+    };
+  });
+}

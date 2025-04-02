@@ -72,26 +72,26 @@ button {
   box-shadow: 0px 0px 0px 0px rgb(255 255 255 /100%), inset 2px 3px 2px 2px rgb(255 255 255 /100%);
   cursor: pointer;
   border-radius: 70px;
+  max-width: 30%;
+  max-height: 50%;
 }
 button:hover {
   background: linear-gradient(180deg, rgba(210, 0, 148, 1) 0%, rgba(144, 0, 128, 1) 100%);
 }
-#buttons p {
+.answer {
   color: white;
-  font-size: 300%;
+  font-size: 150%;
   margin-top: 7%;
   margin-bottom: 7%;
+  width: 100%;
 }
 
-#footer h2 {
+#questionN {
   font-family: "Inter";
   color: white;
   font-size: 25px;
   text-align: center;
   margin-top: 5%;
-}
-#footer span {
-  color: #d20094;
 }
 
 .outer-timerElements {
