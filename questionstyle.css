@@ -28,9 +28,11 @@ img {
   color: white;
   padding: 25px;
   border-radius: 50%;
-  background-image: url("./assets/bg.jpg");
+  /*background-image: url("./assets/bg.jpg");*/
   background-position-x: right;
   background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to border, transparent 25%, black 75%);
+  mask-image: linear-gradient(to border, transparent 25%, black 75%);
 }
 #timer {
   padding: 0;

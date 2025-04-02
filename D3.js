@@ -181,7 +181,7 @@ function answerClick() {
     button.onclick = () => {
       answersRecorded.push(button.innerText);
       if (button.innerText === questions[c].correct_answer) {
-        result++; // Incrementa il punteggio
+        result++; //
       }
 
       if (c < questions.length - 1) {
