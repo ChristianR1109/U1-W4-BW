@@ -26,9 +26,11 @@ stars.forEach((star) => {
 });
 
 // Aggiungere l'evento click per selezionare il valore
+let selectedValue = 0;
 stars.forEach((star) => {
   star.addEventListener("click", () => {
     const value = parseInt(star.getAttribute("data-value"), 10);
+    selectedValue = value;
 
     // Rimuovi la classe "selected" da tutte le stelle
     stars.forEach((s) => s.classList.remove("selected"));
@@ -41,6 +43,21 @@ stars.forEach((star) => {
       }
     });
 
-    console.log(`Selected value: ${value}`);
+    /*console.log(`Selected value: ${value}`);*/
   });
 });
+
+//Submit form
+
+const form = document.querySelector("form");
+form.onsubmit = function (e) {
+  e.preventDefault(); // Prevent the page from refreshing on form submission
+  const grade = selectedValue;
+  const comment = document.getElementById("comment");
+
+  let allData = {
+    Stars: grade,
+    Comment: comment.value
+  };
+  console.log("SUBMIT", allData);
+};
