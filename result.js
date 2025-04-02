@@ -1,8 +1,9 @@
 function calcoloPercentuale(){
-const randomGiuste= Math.floor(Math.random()*101);
+const massimo=100;
+const randomGiuste= Math.floor(Math.random()*massimo+1);
 console.log(randomGiuste);
 
-const massimo=100;
+
 const randomSbagliate=massimo-randomGiuste;
 console.log(randomSbagliate);
 
@@ -35,6 +36,10 @@ if(randomGiuste<60){
      aswers.innerText="Failed!";
      aswers2.innerText="You don't passed the exam."
      aswers2.style.color="#d20094"
-}     
-} 
-calcoloPercentuale();
+}
+const agata=document.querySelector(".meta1");
+let value=randomSbagliate/massimo *360; 
+agata.style.background=`conic-gradient( #d20094 0deg ${value}deg, cyan 0deg 360deg)`;
+
+}
+calcoloPercentuale(); 

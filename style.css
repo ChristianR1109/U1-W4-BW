@@ -112,7 +112,7 @@ h3{
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: conic-gradient(rgb(0, 255, 255) 0deg 360deg, #d20094 270deg 190deg);
+    background: conic-gradient( #d20094 0deg 0deg, cyan 0deg 360deg);
     padding: 14.5%;
  }
  .meta2{
@@ -122,4 +122,4 @@ h3{
     border-radius: 50%;
     background-image: url(/assets/bg.jpg);
     background-position: center;
-}
+ }
