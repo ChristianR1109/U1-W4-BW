@@ -84,13 +84,11 @@ let countdown = 60;
 let countdownTimer;
 
 function startCountdown() {
-  console.log(countdown);
   const countNumber = document.getElementById("timer");
   const borderC = document.getElementById("outer");
   const value = Math.floor((countdown / 60) * 360);
   let value2 = 360 - value;
   borderC.style.background = `conic-gradient(  #8b6394 0deg ${value2}deg, cyan 0deg 360deg)`;
-  console.log(value);
 
   if (countdown >= 0) {
     countNumber.innerText = countdown;
@@ -111,7 +109,6 @@ let c = 0;
 function startQuiz(c) {
   resetCountdown();
   const max = questions.length;
-  console.log(questions.length);
 
   const title = document.getElementById("questionTitle");
   title.innerHTML = "";
@@ -123,25 +120,24 @@ function startQuiz(c) {
   title.appendChild(newH1);
 
   const firstN = Math.floor(Math.random() * 4);
-  console.log(firstN);
+
   let secondN = 0;
   do {
     temp = Math.floor(Math.random() * 4);
   } while (temp === firstN);
   secondN = temp;
-  console.log(secondN);
+
   let thirdN = 0;
   do {
     temp = Math.floor(Math.random() * 4);
   } while (temp === firstN || temp === secondN);
   thirdN = temp;
-  console.log(thirdN);
+
   let fourthN = 0;
   do {
     temp = Math.floor(Math.random() * 4);
   } while (temp === firstN || temp === secondN || temp === thirdN);
   fourthN = temp;
-  console.log(fourthN);
 
   const answersLoc = document.querySelectorAll(".answer");
   const firstAns = answersLoc[firstN];
@@ -159,16 +155,18 @@ function startQuiz(c) {
   answerClick();
 }
 startQuiz(c);
-
+const answersRecorded = [];
 function answerClick() {
   const answerButtons = document.querySelectorAll(".answer");
   answerButtons.forEach((button) => {
     button.onclick = () => {
+      answersRecorded.push(button.innerText);
       if (c < questions.length - 1) {
-        c++; // Passa alla prossima domanda
-        startQuiz(c); // Avvia la prossima domanda
+        c++;
+        startQuiz(c);
       } else {
-        alert("Quiz completato!"); // Mostra un messaggio quando il quiz è finito
+        console.log(answersRecorded);
+        alert("Quiz completato!");
       }
     };
   });
