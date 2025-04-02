@@ -96,6 +96,11 @@ function startCountdown() {
     countdownTimer = setTimeout(startCountdown, 1000);
   } else {
     clearTimeout(countdownTimer);
+    if (c < questions.length - 1) {
+      c++;
+      startQuiz(c); // Avvia la prossima domanda
+      resetCountdown();
+    }
   }
 }
 function resetCountdown() {
@@ -118,36 +123,49 @@ function startQuiz(c) {
   const newH1 = document.createElement("h1");
   newH1.innerText = currentQuestion.question;
   title.appendChild(newH1);
+  if (currentQuestion.type === "multiple") {
+    const firstN = Math.floor(Math.random() * 4);
+    let secondN = 0;
+    do {
+      temp = Math.floor(Math.random() * 4);
+    } while (temp === firstN);
+    secondN = temp;
 
-  const firstN = Math.floor(Math.random() * 4);
+    let thirdN = 0;
+    do {
+      temp = Math.floor(Math.random() * 4);
+    } while (temp === firstN || temp === secondN);
+    thirdN = temp;
 
-  let secondN = 0;
-  do {
-    temp = Math.floor(Math.random() * 4);
-  } while (temp === firstN);
-  secondN = temp;
+    let fourthN = 0;
+    do {
+      temp = Math.floor(Math.random() * 4);
+    } while (temp === firstN || temp === secondN || temp === thirdN);
+    fourthN = temp;
 
-  let thirdN = 0;
-  do {
-    temp = Math.floor(Math.random() * 4);
-  } while (temp === firstN || temp === secondN);
-  thirdN = temp;
-
-  let fourthN = 0;
-  do {
-    temp = Math.floor(Math.random() * 4);
-  } while (temp === firstN || temp === secondN || temp === thirdN);
-  fourthN = temp;
-
-  const answersLoc = document.querySelectorAll(".answer");
-  const firstAns = answersLoc[firstN];
-  firstAns.innerText = currentQuestion.correct_answer;
-  const secondAns = answersLoc[secondN];
-  secondAns.innerText = currentQuestion.incorrect_answers[2];
-  const thirdAns = answersLoc[thirdN];
-  thirdAns.innerText = currentQuestion.incorrect_answers[1];
-  const fourthAns = answersLoc[fourthN];
-  fourthAns.innerText = currentQuestion.incorrect_answers[0];
+    const answersLoc = document.querySelectorAll(".answer");
+    const firstAns = answersLoc[firstN];
+    firstAns.innerText = currentQuestion.correct_answer;
+    const secondAns = answersLoc[secondN];
+    secondAns.innerText = currentQuestion.incorrect_answers[1];
+    const thirdAns = answersLoc[thirdN];
+    thirdAns.innerText = currentQuestion.incorrect_answers[2];
+    const fourthAns = answersLoc[fourthN];
+    fourthAns.innerText = currentQuestion.incorrect_answers[0];
+  } else {
+    let secondN = 0;
+    const firstN = Math.floor(Math.random() * 2);
+    if (firstN == 0) {
+      secondN = 1;
+    } else {
+      secondN = 0;
+    }
+    const answerLoc = document.querySelectorAll(".answer");
+    const firstAns = answerLoc[firstN];
+    firstAns.innerText = currentQuestion.correct_answer;
+    const secondAns = answerLoc[secondN];
+    secondAns.innerText = currentQuestion.incorrect_answers[0];
+  }
 
   const questionNLoc = document.getElementById("questionN");
   questionNLoc.innerHTML = `QUESTION ${c + 1} <span style='color: #d20094;'>${xn}</span>`;
@@ -156,16 +174,22 @@ function startQuiz(c) {
 }
 startQuiz(c);
 const answersRecorded = [];
+let result = 0;
 function answerClick() {
   const answerButtons = document.querySelectorAll(".answer");
   answerButtons.forEach((button) => {
     button.onclick = () => {
       answersRecorded.push(button.innerText);
+      if (button.innerText === questions[c].correct_answer) {
+        result++; // Incrementa il punteggio
+      }
+
       if (c < questions.length - 1) {
         c++;
         startQuiz(c);
       } else {
         console.log(answersRecorded);
+        console.log(result);
         alert("Quiz completato!");
       }
     };

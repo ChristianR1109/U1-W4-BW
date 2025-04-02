@@ -58,7 +58,7 @@ img {
 #questionTitle h1 span {
   font-weight: 700;
 }
-#buttons {
+.buttons {
   margin-top: 5%;
   text-align: center;
   margin-left: 5%;
