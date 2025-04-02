@@ -55,13 +55,14 @@ h3{
 .wrong{
     text-align: end;
     margin-right: 5%;
+    color: rgba(255, 255, 255, 0.603);
 }
 .wrong h1{
     margin: 0;
 }
 .wrong h3{
     margin: 0;
-    color: rgba(255, 255, 255, 0.745);
+    color: rgba(255, 255, 255, 0.603);
     font-size: 20px
 }
 .comment-test h4,h5{
@@ -72,10 +73,9 @@ h3{
     color: #00FFFF;
 }
 .comment-test p {
-    font-size: 15px;
-    width: 80%;
+    font-size: 17px;
     margin-top: 40px;
-    padding-left: 25px;
+    color: rgba(255, 255, 255, 0.603);
  }
  .box{
     text-align: center;
