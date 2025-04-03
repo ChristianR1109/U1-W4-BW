@@ -21,13 +21,14 @@ img {
   width: 10%;
 }
 #outer {
-  margin-left: 89%;
+  width: 12%;
+  text-align: center;
   border-radius: 50%;
   background: conic-gradient(#8b6394 0deg 0deg, cyan 0deg 360deg);
   padding: 20px;
+  margin-bottom: 2%;
 }
 #timerElements {
-  text-align: center;
   color: white;
   padding: 25px;
   border-radius: 50%;
@@ -98,7 +99,7 @@ button:hover {
 }
 
 .outer-timerElements {
-  border-radius: 50%; /* Arrotonda perfettamente il bordo */
+  border-radius: 50%;
   background: conic-gradient(cyan 0deg 180deg, magenta 180deg 360deg);
   text-align: center;
   color: white;
@@ -107,7 +108,7 @@ button:hover {
   border-radius: 50%;
 }
 .inner-circle {
-  width: 180px; /* Riduzione per creare il bordo visibile */
+  width: 180px;
   height: 180px;
   border-radius: 50%;
 }

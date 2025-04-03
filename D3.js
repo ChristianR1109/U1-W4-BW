@@ -194,6 +194,7 @@ function startQuiz(c) {
 
   answerClick();
 }
+
 startQuiz(c);
 const answersRecorded = [];
 let result = 0;
@@ -204,6 +205,10 @@ function answerClick() {
       answersRecorded.push(button.innerText);
       if (button.innerText === questions[c].correct_answer) {
         result++; //
+
+        alert("La risposta é: corretta");
+      } else {
+        alert("La risposta é: sbagliata");
       }
 
       if (c < questions.length - 1) {
