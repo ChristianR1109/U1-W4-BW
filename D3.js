@@ -98,7 +98,7 @@ function startCountdown() {
     clearTimeout(countdownTimer);
     if (c < questions.length - 1) {
       c++;
-      startQuiz(c); // Avvia la prossima domanda
+      startQuiz(c);
       resetCountdown();
     }
   }
@@ -225,13 +225,8 @@ function answerClick() {
 }
 
 function fine(a, b) {
-  // Definisci i valori dinamici da passare
-  const nome = "Christian";
-  const eta = 30;
-
   // Crea l'URL dinamico
   const url = `result.html?a=${a}&b=${b}`;
-
   // Redireziona direttamente alla nuova pagina con i valori dinamici
   window.location.href = url;
 }
