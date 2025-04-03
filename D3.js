@@ -113,12 +113,17 @@ let c = 0;
 
 function startQuiz(c) {
   resetCountdown();
+  const buttonsDiv = document.querySelector(".buttons");
+  if (buttonsDiv) {
+    buttonsDiv.innerText = ""; // .innerText="" sovrascrive il contenuto del contenitore buttonsDiv con una stringa vuota, eliminando i buttons precedentemente esistenti
+  }
+
   const max = questions.length;
 
   const title = document.getElementById("questionTitle");
   title.innerHTML = "";
-  const n = questions.length;
-  let xn = "/ " + n;
+  const n = questions.length; //footer
+  let xn = "/ " + n; //footer
   const currentQuestion = questions[c];
   const newH1 = document.createElement("h1");
   newH1.innerText = currentQuestion.question;
@@ -143,6 +148,16 @@ function startQuiz(c) {
     } while (temp === firstN || temp === secondN || temp === thirdN);
     fourthN = temp;
 
+    for (let i = 0; i < 4; i++) {
+      const buttonsDiv = document.querySelector(".buttons");
+
+      const newButton = document.createElement("button");
+      const newSpan = document.createElement("span");
+      newSpan.classList.add("answer");
+      newButton.appendChild(newSpan);
+      buttonsDiv.appendChild(newButton);
+    }
+
     const answersLoc = document.querySelectorAll(".answer");
     const firstAns = answersLoc[firstN];
     firstAns.innerText = currentQuestion.correct_answer;
@@ -159,6 +174,15 @@ function startQuiz(c) {
       secondN = 1;
     } else {
       secondN = 0;
+    }
+    for (let i = 0; i < 2; i++) {
+      const buttonsDiv = document.querySelector(".buttons");
+
+      const newButton = document.createElement("button");
+      const newSpan = document.createElement("span");
+      newSpan.classList.add("answer");
+      newButton.appendChild(newSpan);
+      buttonsDiv.appendChild(newButton);
     }
     const answerLoc = document.querySelectorAll(".answer");
     const firstAns = answerLoc[firstN];

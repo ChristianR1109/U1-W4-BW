@@ -14,6 +14,9 @@ h1 {
 p {
   font-family: "Inter";
 }
+span {
+  font-family: "Inter";
+}
 img {
   width: 10%;
 }
@@ -73,7 +76,7 @@ button {
   cursor: pointer;
   border-radius: 70px;
   max-width: 30%;
-  max-height: 50%;
+  height: 6rem;
 }
 button:hover {
   background: linear-gradient(180deg, rgba(210, 0, 148, 1) 0%, rgba(144, 0, 128, 1) 100%);
