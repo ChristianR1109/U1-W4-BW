@@ -60,5 +60,7 @@ form.onsubmit = function (e) {
     Comment: comment.value
   };
 
+  console.log(allData);
+
   window.location.href = "thankyoupage.html";
 };
