@@ -64,6 +64,8 @@ footer div p {
   width: auto;
   display: inline-block;
   vertical-align: middle;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
 }
 footer div > button {
   background-color: #00ffff;
@@ -78,8 +80,8 @@ footer div > button {
   box-shadow: 0 0 10px #00ffff, 0 0 10px #00ffff, 0 0 60px #00ffff;
 }
 footer div section {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   display: inline-block;
 }
 footer div section button {
