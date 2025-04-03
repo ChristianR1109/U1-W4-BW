@@ -110,15 +110,13 @@ function resetCountdown() {
 }
 
 let c = 0;
-
+const max = questions.length;
 function startQuiz(c) {
   resetCountdown();
   const buttonsDiv = document.querySelector(".buttons");
   if (buttonsDiv) {
     buttonsDiv.innerText = ""; // .innerText="" sovrascrive il contenuto del contenitore buttonsDiv con una stringa vuota, eliminando i buttons precedentemente esistenti
   }
-
-  const max = questions.length;
 
   const title = document.getElementById("questionTitle");
   title.innerHTML = "";
@@ -212,10 +210,23 @@ function answerClick() {
         c++;
         startQuiz(c);
       } else {
-        console.log(answersRecorded);
+        console.log(max);
         console.log(result);
-        alert("Quiz completato!");
+        alert("Quiz completato, premi OK per continuare.");
+        fine(max, result);
       }
     };
   });
+}
+
+function fine(a, b) {
+  // Definisci i valori dinamici da passare
+  const nome = "Christian";
+  const eta = 30;
+
+  // Crea l'URL dinamico
+  const url = `result.html?a=${a}&b=${b}`;
+
+  // Redireziona direttamente alla nuova pagina con i valori dinamici
+  window.location.href = url;
 }
