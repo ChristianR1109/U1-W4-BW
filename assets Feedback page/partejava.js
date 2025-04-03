@@ -59,5 +59,6 @@ form.onsubmit = function (e) {
     Stars: grade,
     Comment: comment.value
   };
-  console.log("SUBMIT", allData);
+
+  window.location.href = "thankyoupage.html";
 };
