@@ -203,30 +203,38 @@ function answerClick() {
   answerButtons.forEach((button) => {
     button.onclick = () => {
       answersRecorded.push(button.innerText);
+      const buttonDD = button.closest("button");
       if (button.innerText === questions[c].correct_answer) {
-        result++; //
+        result++;
 
-        alert("La risposta é: corretta");
+        buttonDD.classList.add("correctclick");
       } else {
-        alert("La risposta é: sbagliata");
+        buttonDD.classList.add("wrongclick");
+        answerButtons.forEach((obj) => {
+          if (obj.innerText === questions[c].correct_answer) {
+            const greenButton = obj.closest("button");
+            greenButton.classList.add("correctclick");
+          }
+        });
       }
+      setTimeout(() => {
+        if (c < questions.length - 1) {
+          c++;
 
-      if (c < questions.length - 1) {
-        c++;
-        startQuiz(c);
-      } else {
-        console.log(max);
-        console.log(result);
-        alert("Quiz completato, premi OK per continuare.");
-        fine(max, result);
-      }
+          startQuiz(c);
+        } else {
+          console.log(max);
+          console.log(result);
+          alert("Quiz completato, premi OK per continuare.");
+          fine(max, result);
+        }
+      }, 2000);
     };
   });
 }
 
 function fine(a, b) {
-  // Crea l'URL dinamico
-  const url = `result.html?a=${a}&b=${b}`;
-  // Redireziona direttamente alla nuova pagina con i valori dinamici
-  window.location.href = url;
+  const url = `result.html?a=${a}&b=${b}`; // Crea l'URL dinamico
+
+  window.location.href = url; // Redireziona direttamente alla nuova pagina con i valori dinamici
 }

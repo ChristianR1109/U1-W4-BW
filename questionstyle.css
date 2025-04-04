@@ -79,6 +79,12 @@ button {
   max-width: 30%;
   height: 6rem;
 }
+.correctclick {
+  background: #32cd32;
+}
+.wrongclick {
+  background: #df0000;
+}
 button:hover {
   background: linear-gradient(180deg, rgba(210, 0, 148, 1) 0%, rgba(144, 0, 128, 1) 100%);
 }
