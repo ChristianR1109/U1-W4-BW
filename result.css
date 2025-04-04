@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  background-image: url(assets/bg.jpg);
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Inter, sans-serif;
+}
+header {
+  padding-top: 2em;
+  padding-left: 5em;
+}
+header img {
+  width: 15%;
+}
+.titolo {
+  text-align: center;
+}
+.titolo h1 {
+  font-family: Outfit, sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+.titolo h3 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.848);
+  font-weight: 400;
+}
+.correct,
+.comment-test,
+.wrong {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+.correct-wrong {
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+.correct {
+  text-align: start;
+  margin-left: 5%;
+}
+.correct h1 {
+  margin: 0;
+}
+.correct h3 {
+  margin: 0;
+}
+.wrong {
+  text-align: end;
+  margin-right: 5%;
+  color: rgba(255, 255, 255, 0.603);
+}
+.wrong h1 {
+  margin: 0;
+}
+.wrong h3 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.603);
+  font-size: 20px;
+}
+.comment-test h4,
+h5 {
+  margin: 0;
+  font-size: 20px;
+}
+.comment-test h5 {
+  color: #00ffff;
+}
+.comment-test p {
+  font-size: 17px;
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.603);
+}
+.box {
+  text-align: center;
+  margin-top: 10%;
+}
+.percentuale {
+  font-size: 50px;
+}
+.button-rate {
+  margin-top: 5%;
+  text-align: center;
+}
+button {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0);
+  width: 15%;
+  height: 2.5em;
+  border: solid 2px;
+  box-shadow: 0px 0px 8px 1px #0c1ac5;
+  cursor: pointer;
+  margin-bottom: 5%;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.comment-test {
+  text-align: center;
+  padding-top: 80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 200px;
+  border-radius: 50%;
+}
+.meta1 {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: conic-gradient(#d20094 0deg 0deg, cyan 0deg 360deg);
+  padding: 14.5%;
+}
+.meta2 {
+  text-align: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-image: url(/assets/bg.jpg);
+  background-position: center;
+}
