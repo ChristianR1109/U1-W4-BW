@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+body {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-right: 5%;
+}
+h1 {
+  font-family: "Outfit";
+}
+p {
+  font-family: "Inter";
+}
+span {
+  font-family: "Inter";
+}
+img {
+  width: 10%;
+}
+#outer {
+  width: 12%;
+  text-align: center;
+  border-radius: 50%;
+  background: conic-gradient(#8b6394 0deg 0deg, cyan 0deg 360deg);
+  padding: 20px;
+  margin-bottom: 2%;
+}
+#timerElements {
+  color: white;
+  padding: 25px;
+  border-radius: 50%;
+  background-image: url("./assets/bg.jpg");
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+#timer {
+  padding: 0;
+  margin: 0;
+  font-size: 7cap;
+  font-weight: 300;
+  font-family: "Outfit";
+}
+#timerElements p {
+  margin: 0;
+}
+#questionTitle {
+  margin-left: 5%;
+}
+
+#questionTitle h1 {
+  text-align: center;
+  color: white;
+  padding-right: 5%;
+  font-weight: 300;
+  font-size: 7cap;
+  margin-bottom: 0;
+  line-height: 1em;
+}
+#questionTitle h1 span {
+  font-weight: 700;
+}
+.buttons {
+  margin-top: 5%;
+  text-align: center;
+  margin-left: 5%;
+}
+button {
+  background-color: transparent;
+  width: 30%;
+  margin-right: 5%;
+  margin-top: 2%;
+  border-color: white;
+  box-shadow: 0px 0px 0px 0px rgb(255 255 255 /100%), inset 2px 3px 2px 2px rgb(255 255 255 /100%);
+  cursor: pointer;
+  border-radius: 70px;
+  max-width: 30%;
+  height: 6rem;
+}
+.correctclick {
+  background: #32cd32;
+}
+.wrongclick {
+  background: #df0000;
+}
+button:hover {
+  background: linear-gradient(180deg, rgba(210, 0, 148, 1) 0%, rgba(144, 0, 128, 1) 100%);
+}
+.answer {
+  color: white;
+  font-size: 150%;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  width: 100%;
+}
+
+#questionN {
+  font-family: "Inter";
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.outer-timerElements {
+  border-radius: 50%;
+  background: conic-gradient(cyan 0deg 180deg, magenta 180deg 360deg);
+  text-align: center;
+  color: white;
+  margin-left: 89%;
+  padding: 30px;
+  border-radius: 50%;
+}
+.inner-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
