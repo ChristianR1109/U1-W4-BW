@@ -14,7 +14,7 @@ function calcoloPercentuale() {
 
   const variabileGiuste = document.querySelector(".percentualeCorrect");
   const giuste = document.createElement("h1");
-  giuste.innerText = randomGiuste + "%";
+  giuste.innerText = randomGiuste * 10 + "%";
   variabileGiuste.appendChild(giuste);
 
   const divCorrect = document.querySelector(".correct");
@@ -25,7 +25,7 @@ function calcoloPercentuale() {
   const variabileSbagliate = document.querySelector(".percentualeWrong");
   console.log(variabileSbagliate);
   const sbagliate = document.createElement("h1");
-  sbagliate.innerText = randomSbagliate + "%";
+  sbagliate.innerText = randomSbagliate * 10 + "%";
   variabileSbagliate.appendChild(sbagliate);
 
   const divWrong = document.querySelector(".wrong");
@@ -44,6 +44,6 @@ function calcoloPercentuale() {
   }
   const agata = document.querySelector(".meta1");
   let value = (randomSbagliate / massimo) * 360;
-  agata.style.background = conic-gradient( #d20094 0deg ${value}deg, cyan 0deg 360deg);
+  agata.style.background = `conic-gradient( #d20094 0deg ${value}deg, cyan 0deg 360deg)`;
 }
 calcoloPercentuale();
