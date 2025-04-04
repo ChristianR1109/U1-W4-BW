@@ -228,7 +228,7 @@ function answerClick() {
           alert("Quiz completato, premi OK per continuare.");
           fine(max, result);
         }
-      }, 2000);
+      }, 1000);
     };
   });
 }
